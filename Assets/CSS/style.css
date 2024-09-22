@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper {
+
+}
+
+.text-white {
+    color: white !important;
+}
+
+#header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999999;
+    height: 46px;
+    background-color: #000;
+}
+
+#nav {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+#nav li {
+    display: block;
+    position: relative;
+}
+
+#nav li:hover .sub-nav {
+    display: block;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    display: block;
+    padding: 0 24px;
+}
+
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .sub-nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .sub-nav {
+    display: none;
+    min-width: 160px;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .sub-nav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#nav .fa-chevron-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    float: right;
+}
+
+#header .search-btn .fa-magnifying-glass {
+    color: #fff;
+    font-size: 20px;
+    float: right;
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background-image: url(/Assets/Images/chicago.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    /* left: 50%;   Căn giữa (1)
+    transform: translateX(-50%); */
+    width: 100%; /*Căn giữa (2)*/
+    text-align: center;
+}
+
+#slider .text-heading {
+    font-weight: 600;
+    font-size: 24px;
+}
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    text-align: center;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify; /*Căn đều 2 bên Text*/
+    line-height: 1.4;
+}
+
+#content .members-list {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    margin-top: 48px;
+    justify-content: center;
+}
+
+#content .member-item {
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tikets-list {
+    background-color: white;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tikets-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tikets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tikets-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+
+.place-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding-bottom: 32px;
+}
+
+.place-item {
+    width: 34%;
+    padding: 0 8px;
+    margin: 0 -8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.place-img:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-description {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.place-buy-btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#footer {
+
+}
