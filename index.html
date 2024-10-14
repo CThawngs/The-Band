@@ -1,31 +1,39 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Band Website</title>
+    <!-- Link Icon website -->
+    <link rel="icon" type="image/x-icon" href="Assets/Images/icon.png">
     <!-- Link CSS -->
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <!-- Link Font-Aweseome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Link JavaScript -->
+     <script text="text/javascript" src="backend.js"></script>
 </head>
 <body>
     <div id="wrapper">
         <div id="header">
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#content">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <a href="#">More <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="sub-nav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
+
+            <div class="menu-mobile">
+                <i class="fa-solid fa-bars"></i>
+            </div>
 
             <div class="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -66,7 +74,7 @@
             </div>
 
             <!-- Tour section -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
                 <div class="content-section">
                     <h2 class="section-heading text-white">Tour Dates</h2>
                     <p class="section-sub-heading text-white">Remember to book your tickets!</p>
@@ -84,17 +92,17 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
                         <div class="place-item">
                             <img src="Assets/Images/paris.jpg" alt="New York" class="place-img">
                             <div class="place-body">
-                                <h3 class="place-heading">Paris</h3>
+                        <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
 
@@ -104,7 +112,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-description">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -112,15 +120,83 @@
             </div>
 
             <!-- Contact section -->
-            <div class="content-section">
+            <div id="contact" class="contact-section">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 
+                <div class="row contact-content">
+                    <!-- Left -->
+                    <div class="col col-haft s-col-full contact-in4">
+                        <p><i class="fa-solid fa-location-dot"></i>Chicago, US</p>
+                        <p><i class="fa-solid fa-phone"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
+                        <p><i class="fa-solid fa-envelope"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+                    </div>
+                    <!-- Right -->
+                    <div class="col col-haft s-col-full contact-form">
+                        <form action="">
+                            <div class="up">
+                                <input type="text" required name="name" placeholder="Name" class="form_control s-col-full">
+                                <input type="email" required name="email" placeholder="Email" class="form_control s-col-full">
+                            </div>
+                            <div class="down">
+                                <input type="text" required name="message" placeholder="Message" class="form_control">
+                            </div>
+                            <input type="submit" required value="SEND" class="submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <img src="Assets/Images/map.jpg" alt="Map">
             </div>
         </div>
 
         <div id="footer">
-            
+            <div class="social-list">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">© Code by CThawngs</p>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal-container js-modal-content">
+            <div class="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <header class="modal-header">
+                <i class="fa-solid fa-briefcase"></i>
+                Tickets
+            </header>
+
+            <div class="modal-body">
+                <!-- 1 -->
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
+                <!-- 2 -->
+                <label for="tickets-email" class="modal-label">
+                    <i class="fa-solid fa-user"></i>
+                    Send To
+                </label>
+                <input id="tickets-email" type="email" class="modal-input" placeholder="Enter Email">
+                <button id="buy-tickets">
+                    Pay <i class="fa-solid fa-check"></i>
+                </button>
+            </div>
+
+            <footer class="modal-footer">
+                <p class="modal-help">Need <a href="#">help?</a></p>
+            </footer>
         </div>
     </div>
 </body>
